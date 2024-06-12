@@ -1,0 +1,129 @@
+---
+---
+<div class="main">
+    <div class="top">
+        <img class="logo" src="/public/qr.png" alt="A logo.">
+    </div>
+    <div class="bottom">
+        <div class="left">
+            <div class="left-top">
+                <img class="img" src="/public/trim 2.png" alt="A picture of me.">
+                <h1>Hi,<br />I'm already here.</h1> 
+            </div>
+            <div>
+                <p>
+                    Salesforce Certified Developper based in Mendoza, Argentina 🇦🇷.+2 years of practical experience, specialized in Sales Cloud.
+                    <br />
+                </p>
+                <a id="link">a</a>
+            </div>
+        </div>
+        <div class="right">
+            <div>
+                <h1>Qr DoorBell</h1>
+                <h4>Simplified Visiting and lets see howe long until iut trim</h4>
+                <img class="qr" src="/public/trim 2.png" alt="A picture of me.">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    replaceButton();
+    function replaceButton() {
+      const oldButtons = document.querySelectorAll('#link');
+      oldButtons.forEach(oldButton => {
+        const button = document.createElement('a');
+        button.setAttribute('type', 'button');
+        button.setAttribute('href', 'www.google.com');
+        button.setAttribute('rel', 'noreferrer');
+        button.setAttribute('target', '_blank');
+        button.textContent = 'Call';
+  
+        button.style.width = 'fit-content';
+        button.style.color = '#ff7368';
+        button.style.borderColor = '#ff7368';
+        button.style.outlineColor = '#ff7368';
+        button.style.borderRadius = '100vw';
+  
+        // Add hover effect
+        button.addEventListener('mouseenter', function() {
+          button.style.backgroundColor = '#ff7368';
+          button.style.color = 'white';
+        });
+  
+        // Remove hover effect
+        button.addEventListener('mouseleave', function() {
+          button.style.backgroundColor = 'transparent';
+          button.style.color = '#ff7368';
+        });
+        oldButton.parentNode.replaceChild(button, oldButton);
+      });
+    }
+  </script>
+
+<style> 
+    .main {
+        width: 100vw;
+        height: 100vh;
+    }
+    .top{
+        height: 25vh;
+        display: flex;
+        align-items: center;
+        padding-left: 5vw; 
+    }
+    .logo{
+        width: 70px;
+        height: 70px;
+    }
+    .bottom{
+        display: flex;
+        height: 75vh;
+        padding-right: 12.5vw; 
+    }
+    .right {
+        min-width: 36.25vw; 
+        margin-left: 1.25vw; 
+        background-color: #5424bc;
+    }
+    .qr{
+        width: 20vw; 
+    }
+    .left {
+        min-width: 48.75vw; 
+        border-top-right-radius: 50px;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 1.25vw; 
+    }
+    .left-top{
+        display: flex;
+        height: fit-content;   
+        align-items: center; 
+    } 
+    .left-top > h1{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .img{
+        height: 150px;
+        border-radius:100%;
+    }
+    h1, h4, h5{
+        color: #ff7368;
+        cursor: default;
+        font-family: "Lato", sans-serif;
+    }
+	h1 {
+		font-size: 4rem;
+		line-height: 1;
+	}
+	p {
+		font-size:  1.15rem;
+        font-weight: 200;
+        cursor: default;
+	}
+</style>
